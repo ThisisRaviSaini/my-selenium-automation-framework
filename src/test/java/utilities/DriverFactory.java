@@ -10,15 +10,19 @@ public class DriverFactory {
     public static WebDriver driver;
 
     public static WebDriver initDriver(String browser) {
+
         if (browser.equalsIgnoreCase("chrome")) {
             WebDriverManager.chromedriver().setup();
             driver = new ChromeDriver();
+
         } else if (browser.equalsIgnoreCase("firefox")) {
             WebDriverManager.firefoxdriver().setup();
             driver = new FirefoxDriver();
+
         } else {
             throw new IllegalArgumentException("Browser not supported: " + browser);
         }
+
         driver.manage().window().maximize();
         return driver;
     }
