@@ -22,7 +22,6 @@ public class BaseTest {
 
         driver = DriverFactory.initDriver(browser);
         driver.get(url);
-
     }
 
     @AfterClass
