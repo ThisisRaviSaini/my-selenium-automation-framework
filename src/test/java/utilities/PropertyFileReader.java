@@ -11,8 +11,10 @@ public class PropertyFileReader {
 
     public static void loadPropertyFile(String filePath) {
         try (FileInputStream fis = new FileInputStream(filePath)) {
+
             prop = new Properties();
             prop.load(fis);
+
         } catch (IOException e) {
             e.printStackTrace();
         }

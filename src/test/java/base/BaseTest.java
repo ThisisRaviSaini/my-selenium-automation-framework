@@ -15,11 +15,14 @@ public class BaseTest {
     @BeforeClass
     public void setup() {
         PropertyFileReader.loadPropertyFile("src/test/resources/config.properties");
-        String browser = PropertyFileReader.getProperty("browser");
-        driver = DriverFactory.initDriver(browser);
-        driver.get(PropertyFileReader.getProperty("url"));
-
         excelFileReader = new ExcelFileReader();
+
+        String browser = PropertyFileReader.getProperty("browser");
+        String url = PropertyFileReader.getProperty("url");
+
+        driver = DriverFactory.initDriver(browser);
+        driver.get(url);
+
     }
 
     @AfterClass
