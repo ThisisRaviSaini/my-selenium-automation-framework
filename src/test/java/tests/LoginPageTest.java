@@ -14,9 +14,11 @@ public class LoginPageTest {
     @Test
     public void successLoginTest() {
         ExcelFileReader excelFileReader = new ExcelFileReader();
-        String pageNumber = excelFileReader.getData("TC-01", "Page-Number");
-        System.out.println("Page Number : "+pageNumber);
-        LoginPage loginPage = new LoginPage(driver);
+        String username = excelFileReader.getData("TC_01", "Username");
+        String password = excelFileReader.getData("TC_01", "Password");
+        System.out.println("Username: "+username);
+        System.out.println("Password: "+password);
+        //LoginPage loginPage = new LoginPage(driver);
 
 
     }
