@@ -19,13 +19,13 @@ public class LoginPage {
     @FindBy(name = "login")
     private WebElement loginButton;
 
-    //  Constructor
+
     public LoginPage(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);  // Initialize WebElements
     }
 
-    //  Actions (Page Methods)
+
     public void enterEmail(String email) {
         emailInput.clear();
         emailInput.sendKeys(email);
@@ -40,7 +40,7 @@ public class LoginPage {
         loginButton.click();
     }
 
-    //  Combined login action
+    
     public void login(String email, String password) {
         enterEmail(email);
         enterPassword(password);
