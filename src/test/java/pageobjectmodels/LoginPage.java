@@ -24,9 +24,9 @@ public class LoginPage {
     }
 
 
-    public void enterEmail(String email) {
+    public void enterUsername(String userName) {
         emailInput.clear();
-        emailInput.sendKeys(email);
+        emailInput.sendKeys(userName);
     }
 
     public void enterPassword(String password) {
@@ -39,8 +39,8 @@ public class LoginPage {
     }
 
 
-    public void performlogin(String email, String password) {
-        enterEmail(email);
+    public void performlogin(String username, String password) {
+        enterUsername(username);
         enterPassword(password);
         clickLogin();
     }
