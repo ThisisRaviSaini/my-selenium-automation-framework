@@ -6,9 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class LoginPage {
-
     private WebDriver driver;
-
 
     @FindBy(id = "email")
     private WebElement emailInput;
@@ -40,8 +38,8 @@ public class LoginPage {
         loginButton.click();
     }
 
-    
-    public void login(String email, String password) {
+
+    public void performlogin(String email, String password) {
         enterEmail(email);
         enterPassword(password);
         clickLogin();

@@ -20,7 +20,7 @@ public class LoginPageTest extends BaseTest {
         System.out.println("Username: "+username);
         System.out.println("Password: "+password);
 
-        loginPage.login(username,password);
+        loginPage.performlogin(username,password);
 
 
     }
