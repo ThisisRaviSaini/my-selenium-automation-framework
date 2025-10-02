@@ -39,7 +39,7 @@ public class LoginPage {
     }
 
 
-    public void performlogin(String username, String password) {
+    public void performLogin(String username, String password) {
         enterUsername(username);
         enterPassword(password);
         clickLogin();
