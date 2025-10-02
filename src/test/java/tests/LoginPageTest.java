@@ -1,16 +1,16 @@
 package tests;
 
+import base.BaseTest;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pageobjectmodels.LoginPage;
 import utilities.ExcelFileReader;
 
-import static utilities.DriverFactory.driver;
-
-public class LoginPageTest {
 
 
+public class LoginPageTest extends BaseTest {
 
+    
     @Test
     public void successLoginTest() {
         ExcelFileReader excelFileReader = new ExcelFileReader();
@@ -18,7 +18,8 @@ public class LoginPageTest {
         String password = excelFileReader.getData("TC_01", "Password");
         System.out.println("Username: "+username);
         System.out.println("Password: "+password);
-        //LoginPage loginPage = new LoginPage(driver);
+        LoginPage loginPage = new LoginPage(driver);
+        loginPage.login(username,password);
 
 
     }
