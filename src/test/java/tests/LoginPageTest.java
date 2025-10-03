@@ -1,13 +1,13 @@
 package tests;
 
-import base.BaseTest;
+import base.BasePage;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 import pageobjectmodels.LoginPage;
 import utilities.ExcelFileReader;
 
 
-public class LoginPageTest extends BaseTest {
+public class LoginPageTest extends BasePage {
 
     ExcelFileReader excelFileReader = new ExcelFileReader();
     LoginPage loginPage = new LoginPage(driver);

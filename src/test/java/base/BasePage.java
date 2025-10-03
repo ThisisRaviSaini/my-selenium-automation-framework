@@ -7,7 +7,7 @@ import utilities.DriverFactory;
 import utilities.ExcelFileReader;
 import utilities.PropertyFileReader;
 
-public class BaseTest {
+public class BasePage {
 
     protected WebDriver driver;
     protected ExcelFileReader excelFileReader;
